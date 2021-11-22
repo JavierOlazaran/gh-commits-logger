@@ -1,0 +1,41 @@
+.main__page__container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 40px;
+  background-color: var(--main-background);
+
+  .commits__list__container {
+    background-color: aqua;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    height: 85vh;
+    width: 25vw;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    .commits__list__title {
+      background-color: yellow;
+      display: block;
+      box-sizing: border-box;
+      padding: 16px;
+      margin: 0;
+
+      text-align: center;
+      font-weight: 400;
+
+    }
+
+    .commit__list {
+      background-color: red;
+      width: 100%;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

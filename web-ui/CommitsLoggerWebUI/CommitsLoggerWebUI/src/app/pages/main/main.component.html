@@ -1,1 +1,10 @@
-<p>main works!</p>
+<div class="main__page__container">
+  <div class="commits__list__container">
+    <h1 class="commits__list__title">Commits's Log</h1>
+    <ul class="commit__list">
+      <li *ngFor="let commit of commits" >
+        <logger-commit-item [commit] = "commit"></logger-commit-item>
+      </li>
+    </ul>
+  </div>
+</div>
