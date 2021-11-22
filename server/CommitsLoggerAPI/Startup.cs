@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using CommitsLoggerAPI.Core.SignalHub;
 
 namespace CommitsLoggerAPI
 {
@@ -28,6 +29,7 @@ namespace CommitsLoggerAPI
         {
 
             services.AddControllers();
+            services.AddSignalR();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CommitsLoggerAPI", Version = "v1" });
@@ -52,6 +54,7 @@ namespace CommitsLoggerAPI
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHub<SignalHub>("");
                 endpoints.MapControllers();
             });
         }
