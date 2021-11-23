@@ -4,13 +4,7 @@ export interface CommitsDTO {
 
 export interface Commit {
   sha: string;
-  author: Author;
+  author: string;
   message: string;
-  distinct: boolean;
   url: string;
-}
-
-export interface Author {
-  email: string;
-  name: string;
 }

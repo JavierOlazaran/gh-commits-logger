@@ -1,9 +1,28 @@
 :root {
-  // Dark theme values
-  --main-background-dark: hsl(205, 13%, 18%);
 
-  /*** Themes ***/
+  // Dark theme values //
+  // Colors
+  --main-background-dark: hsl(205, 13%, 20%);
+  --secondary-background-dark: hsl(205, 13%, 15%);
+  --primary-foreground-dark: hsl(201, 11%, 76%);
+  --secondary-foreground-dark: hsl(182, 64%, 59%);
+
+  // Shadows
+  --block-shadow-dark: 0px 12px 12px -4px rgba(0,0,0,0.12);
+
+  // Dark theme values //
+
+
+  /*** Theme ***/
+
+  // Colors
   --main-background: var(--main-background-dark);
+  --secondary-background: var(--secondary-background-dark);
+  --primary-foreground: var(--primary-foreground-dark);
+  --secondary-foreground: var(--secondary-foreground-dark);
+
+  // Shadows
+  --block-shadow: var(--block-shadow-dark);
 }
 
 html {

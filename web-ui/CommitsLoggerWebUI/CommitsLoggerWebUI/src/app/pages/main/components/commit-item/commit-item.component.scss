@@ -1,0 +1,36 @@
+.commit__item__container {
+  background-color: var(--secondary-background);
+  box-sizing: border-box;
+  padding: 24px;
+  margin: 16px 0;
+  border-radius: 8px;
+  color: var(--primary-foreground);
+  box-shadow: var(--block-shadow);
+
+  h3 {
+    margin: 0;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .commit__item__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-top: 24px;
+
+    p {
+      margin: 8px 0;
+      font-weight: 200;
+    }
+
+    a {
+      margin: 8px 0;
+      color: var(--secondary-foreground);
+    }
+  }
+}
