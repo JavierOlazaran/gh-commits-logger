@@ -1,17 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using CommitsLoggerAPI.Core.SignalHub;
 
 namespace CommitsLoggerAPI
 {
@@ -29,7 +23,13 @@ namespace CommitsLoggerAPI
         {
 
             services.AddControllers();
-            services.AddSignalR();
+            services.AddMediatR(typeof(Startup));
+            services.AddHttpClient("github", client =>
+            {
+                client.BaseAddress = new Uri("https://api.github.com/");
+                client.DefaultRequestHeaders.Add("accept", "application/vnd.github.v3+json");
+                client.DefaultRequestHeaders.Add("User-Agent", "HttpClientFactoryExample");
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CommitsLoggerAPI", Version = "v1" });
@@ -54,7 +54,6 @@ namespace CommitsLoggerAPI
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHub<SignalHub>("");
                 endpoints.MapControllers();
             });
         }
