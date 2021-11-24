@@ -1,4 +1,6 @@
 using System;
+using CommitsLoggerAPI.Extensions;
+using CommitsLoggerAPI.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +24,9 @@ namespace CommitsLoggerAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddSingleton<IGithubRequests, GithubRequests>();
+            services.AddTransient<IResponseMapper, ResponseMapper>();
+            
             services.AddControllers();
             services.AddMediatR(typeof(Startup));
             services.AddHttpClient("github", client =>
