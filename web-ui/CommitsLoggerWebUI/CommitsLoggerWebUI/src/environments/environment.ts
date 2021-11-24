@@ -2,8 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+export const apiRoot: string = 'https://localhost:5001';
+export const apiBase: string = '/api/v1';
+
 export const environment = {
-  production: false
+  production: false,
+  commitLoggerEndpoints: {
+    getAllCommits: apiRoot + apiBase + '/commits',
+  }
 };
 
 /*

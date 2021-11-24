@@ -3,6 +3,6 @@
 
   <div class="commit__item__footer">
     <p class="commit__author">Author: {{commit.author}}</p>
-    <a href="" class="commit__view__link">View Commit</a>
+    <a [href]="commit.url | sanitizeUrl" target="blank" class="commit__view__link">View Commit</a>
   </div>
 </div>

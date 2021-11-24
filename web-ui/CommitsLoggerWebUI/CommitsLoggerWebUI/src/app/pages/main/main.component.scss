@@ -11,7 +11,7 @@
 
     position: absolute;
     height: 85vh;
-    width: 25vw;
+    width: 45vw;
     min-width: 300px;
 
     left: 50%;
@@ -37,6 +37,7 @@
       scrollbar-width: none;
 
       &::-webkit-scrollbar {
+        scrollbar-gutter: stable;
         display: none;
       }
 
