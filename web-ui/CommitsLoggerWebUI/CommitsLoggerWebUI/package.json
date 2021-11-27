@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "npx test",
+    "test:coverage": "npx test --coverage",
+    "test:watch": "npx test --coverage --watch"
   },
   "private": true,
   "dependencies": {
@@ -27,13 +29,12 @@
     "@angular/cli": "~12.1.4",
     "@angular/compiler-cli": "~12.1.0",
     "@types/jasmine": "~3.8.0",
+    "@types/jest": "^27.0.3",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
+    "jest": "^27.3.1",
+    "jest-preset-angular": "^11.0.1",
     "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.2"
   }
 }
