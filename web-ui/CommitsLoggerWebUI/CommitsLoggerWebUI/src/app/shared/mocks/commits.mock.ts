@@ -1,4 +1,4 @@
-import { Commit } from './../core/model/dtos/commits.dto';
+import { Commit } from '../../core/model/dtos/commits.dto';
 
 export const COMMITS_MOCK: Commit[] = [
   {
@@ -72,3 +72,11 @@ export const COMMITS_MOCK: Commit[] = [
       "url": "https://github.com/JavierOlazaran/gh-commits-logger/commit/f97b734ed2f0f039dd2058dc6553794f16a64fc8"
   }
 ]
+
+export const COMMIT_ELEMENT_MOCK: Commit = {
+  "sha": "21475f58ae7d4559498433e1a0f30a7d17633fda",
+  "author": "Javier Olazaran",
+  "message": "Added light theme placeholder",
+  "date": "2021-11-23T04:16:19+00:00",
+  "url": "https://github.com/JavierOlazaran/gh-commits-logger/commit/21475f58ae7d4559498433e1a0f30a7d17633fda"
+}

@@ -6,9 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "npx test",
-    "test:coverage": "npx test --coverage",
-    "test:watch": "npx test --coverage --watch",
+    "test": "npx jest",
+    "test:coverage": "npx jest --coverage=true",
+    "test:watch": "npx jest --coverage=true --watch",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"

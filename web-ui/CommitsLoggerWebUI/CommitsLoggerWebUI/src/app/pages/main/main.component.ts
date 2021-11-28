@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { LoggerApiService } from './../../core/services/logger-api.service';
 import { Commit } from './../../core/model/dtos/commits.dto';
 import { Component, OnInit } from '@angular/core';
-import { COMMITS_MOCK } from 'src/app/mocks/commits.mock';
+import { COMMITS_MOCK } from 'src/app/shared/mocks/commits.mock';
 
 @Component({
   selector: 'app-main',
